@@ -1,0 +1,25 @@
+body{
+  padding-top: 10px;
+  word-wrap:break-word;
+  background-color: #0072ff8c;
+}
+img{
+  height: 200px;
+}
+
+h1{
+  color: #3f00ff;
+}
+
+.strike{
+  text-decoration: line-through;
+}
+.blueS{
+  color: blue;
+}
+.yellowS{
+  color: yellow;
+}
+.redS{
+  color: red;
+}

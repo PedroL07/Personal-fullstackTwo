@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <title>21 Savage Fan Site</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fe55a8ead5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><i class="fa-solid fa-building"></i></span> Big baller brand Maintance Log</h1>
+        <h2>Use the Emojis to edit logs</h2>
+        <h3>Emoji Key</h3>
+        <p><i class="fa fa-trash" aria-hidden="true"></i> - Delete log</p>
+        <p><i class="fa-solid fa-check"></i> - Cross out log</p>
+        <p><i class="fa-regular fa-face-frown"> - Low priority</i></p>
+        <p><i class="fa-solid fa-face-sad-tear"> - Medium priority</i></p>
+        <p><i class="fa-solid fa-face-sad-cry"> - High priority</i></p>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+        <form action="/messages" method="POST">
+          <input type="text" placeholder="Name" name="name">
+          <input type="text" placeholder="Unit #" name="location">
+          <input type="date" value="2022-11-12T20:20" name="date">
+          <input type="tel" placeholder="Best # to Call" name="cell">
+          <textarea placeholder="What's the issue" name="msg"></textarea>      
+          <button type="submit">submit</button>
+        </form>
+
+            <h3>Log:</h3>
+            <ul class="messages">
+            <% for(var i=0; i<messages.length; i++) {%>
+              <li class="message <%= messages[i].completed ? 'strike' : '' %>
+                <%= messages[i].blue ? 'blueS' : '' %>
+                <%= messages[i].yellow ? 'yellowS' : '' %>
+                <%= messages[i].red ? 'redS' : '' %>
+                ">
+                <span>Hello,</span>
+                <span class="nameS"><%= messages[i].name %></span>
+                <span>thanks for letting us know about the issue in unit</span>
+                <span class="locationS"><%= messages[i].location %></span>
+                <span>that happended on</span>
+                <span class="dateS"><%= messages[i].date %></span>
+                <span>We will call you at</span>
+                <span class="cellS"><%= messages[i].cell %></span>
+                <span>very soon, let us know what's going on. -- - your msg -></span>
+                <span class="msgS"><%= messages[i].msg %></span>
+                <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+                <span><i class="fa-solid fa-check"></i></span>
+                <span><i class="fa-regular fa-face-frown"></i></span>
+                <span><i class="fa-solid fa-face-sad-tear"></i></span>
+                <span><i class="fa-solid fa-face-sad-cry"></i></span>
+              </li>
+            <% } %>
+            </ul>
+
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
+
+
+<!-- Worked on this with HOUSE CASS! & Isaiah , Oscar Cory-Mentor  -->
