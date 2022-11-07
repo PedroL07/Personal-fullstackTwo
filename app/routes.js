@@ -30,7 +30,7 @@ app.post('/messages', (req, res) => {
   db.collection('messages').insertOne({name: req.body.name, msg: req.body.msg, location: req.body.location, date: req.body.date, cell: req.body.cell, completed:false, blue: false, yellow: false, red: false }, (err, result) => {
     if (err) return console.log(err)
     console.log('saved to database')
-    res.redirect('/')
+    res.redirect('/profile')
   })
 })
 
@@ -94,44 +94,6 @@ app.put('/red', (req, res) => { // creating a new document
     res.send(result)
   })
 })
-
-    // app.post('/messages', (req, res) => {
-    //   db.collection('messages').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
-    //     if (err) return console.log(err)
-    //     console.log('saved to database')
-    //     res.redirect('/profile')
-    //   })
-    // })
-
-    // app.put('/thumbUp', (req, res) => {
-    //   db.collection('messages')
-    //   .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
-    //     $set: {
-    //       thumbUp: 5
-    //     }
-    //   }, {
-    //     sort: {_id: 1},
-    //     upsert: true
-    //   }, (err, result) => {
-    //     if (err) return res.send(err)
-    //     res.send(result)
-    //   })
-    // })
-
-    // app.put('/thumbDown', (req, res) => {
-    //   db.collection('messages')
-    //   .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
-    //     $set: {
-    //       thumbUp:req.body.thumbDown - 1
-    //     }
-    //   }, {
-    //     sort: {_id: 1},
-    //     upsert: true
-    //   }, (err, result) => {
-    //     if (err) return res.send(err)
-    //     res.send(result)
-    //   })
-    // })
 
     
 

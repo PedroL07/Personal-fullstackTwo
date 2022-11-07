@@ -21,8 +21,11 @@
         <p><i class="fa-regular fa-face-frown"> - Low priority</i></p>
         <p><i class="fa-solid fa-face-sad-tear"> - Medium priority</i></p>
         <p><i class="fa-solid fa-face-sad-cry"> - High priority</i></p>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <!-- <a href="/logout" class="btn btn-default btn-sm">Logout</a> -->
     </div>
+    <div>
+
+    <% if (user.local.email) { %>
         <form action="/messages" method="POST">
           <input type="text" placeholder="Name" name="name">
           <input type="text" placeholder="Unit #" name="location">
@@ -31,7 +34,8 @@
           <textarea placeholder="What's the issue" name="msg"></textarea>      
           <button type="submit">submit</button>
         </form>
-
+        <% } %>
+      </div>
             <h3>Log:</h3>
             <ul class="messages">
             <% for(var i=0; i<messages.length; i++) {%>
