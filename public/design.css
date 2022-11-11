@@ -1,0 +1,56 @@
+body{
+  background-image: url(img/logo.png);
+  background-color: rgb(232, 232, 232);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 50% 140%;
+  color: rgb(61, 61, 61);
+  font-size: 1.7rem;
+  
+
+}
+.leave{
+  width: 100%;
+}
+
+
+h3{
+  color: rgb(148, 127, 87);
+}
+
+.strike{
+  text-decoration: line-through;
+}
+.blueS,.fa-face-frown{
+  color: green;
+}
+.yellowS,.fa-face-sad-tear{
+  color: orange;
+}
+.redS,.fa-face-sad-cry{
+  color: red;
+}
+
+.container{
+  padding-top: 25%;
+}
+.keys{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.forms{
+ float: left;
+ width: 25%;
+
+}
+
+input,button,textarea{
+  width: 80%;
+  clear: both;
+  font-size: 1.5rem;
+  color:rgb(148, 127, 87) ;
+}
+li{
+  font-size: 1.2rem;
+}

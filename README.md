@@ -1,3 +1,5 @@
+![Maintenance Log](img.jpg)
+
 ## Installation
 
 1. Clone repo
@@ -6,7 +8,7 @@
 ## Usage
 
 1. run `node server.js`
-2. Navigate to `localhost:8080`
+2. Navigate to `localhost:7070`
 
 ## Credit
 

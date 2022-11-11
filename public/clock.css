@@ -1,0 +1,41 @@
+body{
+  /* padding-top:80px; */
+  word-wrap:break-word;
+  background-color:  rgb(61, 61, 61);
+  /* margin: 25%; */
+  margin-top: 10%;
+  border: 1px solid black;
+  /* display: flex; */
+  font-family: 'Source Code Pro', monospace;
+  color: rgb(148, 127, 87);
+}
+
+h1{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+input{
+  height: 1.5rem;
+  display: flex;
+  width: 50%;
+  margin-left: 25%;
+  border: 1px solid black;
+  border-bottom: 10%;
+
+}
+label{
+  font-size: 1.7rem;
+  display: flex;
+  justify-content: center;
+}
+button{
+  width: 52%;
+  margin-left: 24%;
+  margin-top: 1%;
+  font-size: 1.7rem;
+  background-color: rgb(255, 255, 255);
+}
+a{
+  color: white;
+}
